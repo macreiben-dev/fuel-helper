@@ -13,6 +13,4 @@
   </div>
 </template>
 <style>
-@import './assets/styles/grid.css';
-@import './assets/styles/formcontrol.css';
 </style>

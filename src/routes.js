@@ -1,5 +1,5 @@
-import FuelHelperMain from './components/FuelHelperMain.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import FuelHelperMain from './components/views/FuelHelperMain.vue'
+import HelloWorld from './components/views/HelloWorld.vue'
 
 const routes = [
     {path: '/', component: FuelHelperMain},

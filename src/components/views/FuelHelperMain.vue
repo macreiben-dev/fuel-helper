@@ -19,7 +19,7 @@
         </div>
         <div class="row">
             <div class="col-sm-2 header">Race total time (sec)</div>
-            <div class="col-sm-2"><input type="text" class="form-control editable" id="TotalRaceTime"></div>
+            <div class="col-sm-2"><input type="text" class="form-control editable" id="TotalRaceTimeHours"></div>
             <div class="col-sm-2 data">01h30:00</div>
             <div class="col-sm-2 data">TODO<!-- Estimated lap time that will be run --></div> 
             <div class="col-sm-2 data">TODO<!-- Estimated consumption --></div>
@@ -42,7 +42,13 @@
             <div class="col-sm-2 data">TODO<!-- Estimated service --></div>
         </div>
     </div>
+    <race-duration-control/>
 </template>
-<style scoped>
-@import '../assets/styles/computationgrid.css';
-</style>
+<script>
+import RaceDurationControl from '../typing/durations/RaceDurationControl.vue'
+export default {
+    components: {
+        RaceDurationControl
+    }
+}
+</script>

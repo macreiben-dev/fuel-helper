@@ -8,6 +8,10 @@ import App from './App.vue'
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import "./assets/styles/computationgrid.css"
+import "./assets/styles/formcontrol.css"
+import "./assets/styles/grid.css"
+
 // --------------------------------
 
 import routes from './routes.js'
