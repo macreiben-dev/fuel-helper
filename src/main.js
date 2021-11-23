@@ -4,15 +4,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 
 // --------------------------------
-
+// Includes bootstrap here.
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // --------------------------------
 
 import routes from './routes.js'
-
-
 
 console.log('starting ...');
 
@@ -23,6 +21,12 @@ const router = createRouter({
 
 var app = createApp(App);
 
+console.log('app created.');
+
 app.use(router)
  
+console.log('router is set.');
+
 app.mount('#app')
+
+console.log('app is mounted.');
