@@ -1,9 +1,15 @@
 <template>
-  <h1>Hello App!</h1>
-  <ul>
-    <li><router-link to="/">Home</router-link></li>
-    <li><router-link to="/help">Help</router-link></li>
-  </ul>
-  
-  <router-view></router-view>
+  <div class="container">
+
+  <nav class="nav">
+    <li class="nav-item">
+      <router-link class="nav-link" to="/">Home</router-link>
+    </li>
+    <li class="nav-item">
+      <router-link class="nav-link" to="/help">Help</router-link>
+    </li>
+  </nav>
+    <router-view></router-view>
+  </div>
+
 </template>
