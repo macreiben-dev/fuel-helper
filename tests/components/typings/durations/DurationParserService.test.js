@@ -12,10 +12,22 @@ describe('can extract duration in minute', () => {
         expect(actual).toBe(60)
     })
     
-    test('when duration is 1H', () => {
+    each([
+      ["1H"],
+      ["1h"]]).it("when duration is '%s'", (text) => {
         let target = new DurationParserService();
     
-        let actual = target.parse('2H')
+        let actual = target.parse(text)
+    
+        expect(actual).toBe(60)
+    })
+
+    each([
+      ["2H"],
+      ["2h"]]).it("when duration is '%s'", (text) => {
+        let target = new DurationParserService();
+    
+        let actual = target.parse(text)
     
         expect(actual).toBe(120)
     })
