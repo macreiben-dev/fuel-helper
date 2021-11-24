@@ -4,12 +4,12 @@ import each from "jest-each"
 
 describe('can extract duration in minute', () => {
 
-    test('when duration is 1H', () => {
+    test('when duration is 1PPPP', () => {
         let target = new DurationParserService();
     
-        let actual = target.parse('1H')
+        let actual = target.parse('1PPP')
     
-        expect(actual).toBe(60)
+        expect(actual).toBe(0)
     })
     
     each([

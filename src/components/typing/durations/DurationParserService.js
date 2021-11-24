@@ -2,25 +2,37 @@ export default class DurationParserService
 { 
     constructor() {
         this.regexHour = /^([0-9]{1,2})[Hh]$/
+
+        this.regexHourMinutes = /^([0-9]{1,2})[Hh]([0-9]{1,2})$/
+
+        this.zero = 0;
+
+        this.toMinutesCount = (hourCount) => {
+            return hourCount * 60;
+        }
     }
 
     parse(source) {
 
-       
+        let matchesHourMinutes = this.regexHourMinutes.exec(source)
 
-        if(source == '1H30' || source == '1h30') {
-            return 90;
+        if(matchesHourMinutes != null) {
+
+            let hourCount = parseInt(matchesHourMinutes[1]);
+            let minuteCount = parseInt(matchesHourMinutes[2]);
+
+            return this.toMinutesCount(hourCount) + minuteCount;
         }
         
-        let matches = this.regexHour.exec(source)
+        let matchesHourOnly = this.regexHour.exec(source)
 
-        let hourCount = matches[1];
+        if(matchesHourOnly != null) {
 
-        return hourCount * 60;
+            let hourCount = matchesHourOnly[1];
 
-        if(source == '2H' || source == '2h') {
-            return 120
+            return this.toMinutesCount(hourCount);           
         }
-        return 60;
+
+        return this.zero;
     }
 }
